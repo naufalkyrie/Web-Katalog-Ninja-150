@@ -1,0 +1,1045 @@
+/*
+    
+TemplateMo 556 Catalog-Z
+
+https://templatemo.com/tm-556-catalog-z
+
+*/
+
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1001;
+}
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #3498db;
+
+    -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+    animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+
+    z-index: 1002;
+}
+
+    #loader:before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: #e74c3c;
+
+        -webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+        animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+    }
+
+    #loader:after {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: #f9c922;
+
+        -webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+          animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+    }
+
+    @-webkit-keyframes spin {
+        0%   { 
+            -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: rotate(0deg);  /* IE 9 */
+            transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+        }
+        100% {
+            -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: rotate(360deg);  /* IE 9 */
+            transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+        }
+    }
+    @keyframes spin {
+        0%   { 
+            -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: rotate(0deg);  /* IE 9 */
+            transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+        }
+        100% {
+            -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: rotate(360deg);  /* IE 9 */
+            transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+        }
+    }
+
+    #loader-wrapper .loader-section {
+        position: fixed;
+        top: 0;
+        width: 51%;
+        height: 100%;
+        background: #222222;
+        z-index: 1001;
+        -webkit-transform: translateX(0);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: translateX(0);  /* IE 9 */
+        transform: translateX(0);  /* Firefox 16+, IE 10+, Opera */
+    }
+
+    #loader-wrapper .loader-section.section-left {
+        left: 0;
+    }
+
+    #loader-wrapper .loader-section.section-right {
+        right: 0;
+    }
+
+    /* Loaded */
+    .loaded #loader-wrapper .loader-section.section-left {
+        -webkit-transform: translateX(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: translateX(-100%);  /* IE 9 */
+                transform: translateX(-100%);  /* Firefox 16+, IE 10+, Opera */
+
+        -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
+                transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    }
+
+    .loaded #loader-wrapper .loader-section.section-right {
+        -webkit-transform: translateX(100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: translateX(100%);  /* IE 9 */
+                transform: translateX(100%);  /* Firefox 16+, IE 10+, Opera */
+
+-webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
+        transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    }
+    
+    .loaded #loader {
+        opacity: 0;
+        -webkit-transition: all 0.3s ease-out;  
+                transition: all 0.3s ease-out;
+    }
+    .loaded #loader-wrapper {
+        visibility: hidden;
+
+        -webkit-transform: translateY(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: translateY(-100%);  /* IE 9 */
+                transform: translateY(-100%);  /* Firefox 16+, IE 10+, Opera */
+
+        -webkit-transition: all 0.3s 1s ease-out;  
+                transition: all 0.3s 1s ease-out;
+    }
+
+p { line-height: 1.8; }
+
+a { 
+    text-decoration: none;
+    transition: all 0.3s ease; 
+}
+a:hover { color:#009999; }
+.container-fluid { max-width: 1770px; }
+.tm-container-small { max-width: 1050px; }
+.btn { border-radius: 0; }
+.btn-primary {
+    background-color: #009999;
+    border: 0;
+    border-radius: 5px;
+    padding: 12px 50px 14px;
+    font-size: 1.2rem;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color:#086969;
+}
+
+.btn-primary.disabled, 
+.btn-primary:disabled {
+    background-color: #009999;
+    pointer-events: all;
+    cursor: not-allowed;
+}
+
+.form-control {
+	padding: 10px 20px;
+	width: 100%;
+	height: auto;
+}
+
+.form-group { margin-bottom: 25px; }
+.tm-btn-big { padding: 12px 90px 14px; }
+
+.navbar-toggler:focus { box-shadow: none; }
+.navbar-brand {
+    color: #3399CC;
+    font-size: 1.6rem;
+}
+
+.navbar-brand i { font-size: 2rem; }
+
+.tm-hero {
+    min-height: 200px;
+    background: transparent;
+}
+
+.tm-mt-60 { margin-top: 60px; }
+.tm-mb-50 { margin-bottom: 50px; }
+.tm-mb-74 { margin-bottom: 74px; }
+.tm-mb-90 { margin-bottom: 90px; }
+.tm-text-primary { color: #009999; }
+.tm-text-secondary { color: #CC6699; }
+a.tm-text-primary:hover { color:#666666; }
+.tm-bg-gray { background-color: #EEEEEE; }
+.tm-input-paging {
+    width: 40px;
+    border-radius: 0;
+    border: 1px solid #CCCCCC;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+.nav-item { margin-right: 30px; }
+.nav-item:last-child { margin-right: 0; }
+
+.nav-link {
+    color: #666666;
+    border-bottom: 4px solid transparent;
+    font-size: 1.2rem;
+}
+
+.nav-link-1.active,
+.nav-link-1:hover {
+    border-color: #33CCFF;
+}
+
+.nav-link-2.active,
+.nav-link-2:hover {
+    border-color: #FF6666;
+}
+
+.nav-link-3.active,
+.nav-link-3:hover {
+    border-color: #33CC66;
+}
+
+.nav-link-4.active,
+.nav-link-4:hover {
+    border-color: #CC66CC;
+}
+
+.tm-search-input {
+    width: 360px;
+    border-radius: 0;
+    padding: 12px 15px;
+    color: #009999;
+    border: none;
+}
+
+.tm-search-input:focus {
+    border-color: #009999;
+    box-shadow: 0 0 0 0.25rem rgb(0 153 153 / 0.25);
+}
+
+.tm-search-input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #009999;
+    opacity: 1; /* Firefox */
+}
+  
+.tm-search-input::-ms-input-placeholder { /* Microsoft Edge */
+    color: #009999;
+}
+
+.tm-search-btn {
+    color: white;
+    background-color: #009999;
+    border: none;
+    width: 100px;
+    height: 50px;
+    margin-left: -1px;
+}
+
+p, .tm-text-gray { color: #999; }
+.tm-text-gray-light { color: #CCC; }
+.tm-text-gray-dark { color: #666; }
+
+.tm-video-item {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+}
+
+.tm-video-item img {
+    position: relative;
+    display: block;
+    min-height: 100%;
+    max-width: 100%;
+    opacity: 0.8;
+}
+
+.tm-video-item figcaption {
+    padding: 2em;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    -webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.tm-video-item figcaption::before,
+.tm-video-item figcaption::after {
+    pointer-events: none;
+}
+
+.tm-video-item figcaption,
+.tm-video-item figcaption > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.tm-video-item figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+.tm-video-item h2 {
+    word-spacing: -0.15em;
+    font-weight: 300;
+}
+
+.tm-video-item h2,
+.tm-video-item p {
+    margin: 0;
+}
+
+.tm-video-item p {
+    letter-spacing: 1px;
+    font-size: 68.5%;
+}
+
+.tm-gallery div.d-block { animation: show .5s ease; }
+
+@keyframes show {
+    0% {
+    	opacity: 0;
+    	transform: scale(0.9);
+    }
+    100% {
+    	opacity: 1;
+    	transform: scale(1);
+    }
+}
+
+.tm-paging-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    font-size: 1.1rem;
+    color: #999;
+    background-color: #EEEEEE;
+    margin: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.tm-paging-link:hover,
+.tm-paging-link.active {
+    background-color: #009999;
+    color: #fff; 
+}
+
+/*---------------*/
+/***** Ming *****/
+/*---------------*/
+
+figure.effect-ming {
+	background: #030c17;
+}
+
+figure.effect-ming img {
+	opacity: 0.9;
+	-webkit-transition: opacity 0.35s;
+	transition: opacity 0.35s;
+}
+
+figure.effect-ming figcaption::before {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	bottom: 30px;
+	left: 30px;
+	border: 2px solid #fff;
+	box-shadow: 0 0 0 30px rgba(255,255,255,0.2);
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: scale3d(1.4,1.4,1);
+	transform: scale3d(1.4,1.4,1);
+}
+
+figure.effect-ming h2 {
+    font-size: 1.3em;
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: scale(1.5);
+	transform: scale(1.5);
+}
+
+figure.effect-ming:hover figcaption::before,
+figure.effect-ming:hover h2 {
+	opacity: 1;
+	-webkit-transform: scale3d(1,1,1);
+	transform: scale3d(1,1,1);
+}
+
+figure.effect-ming:hover figcaption { background-color: rgba(58,52,42,0); }
+figure.effect-ming:hover img { opacity: 0.4; }
+
+.tm-footer-links li {
+    list-style: none;
+    margin-bottom: 5px;    
+}
+
+.tm-footer-links li a { color: #999999; }
+.tm-footer-links li a:hover { color: #009999; }
+
+.tm-social-links li {
+    list-style: none;
+    margin-right: 15px;
+}
+
+.tm-social-links li:last-child { margin-right: 0; }
+
+.tm-social-links li a  {
+    color: #999999;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+}
+
+.tm-social-links li a:hover {
+    color: #fff;
+    background-color: #009999;
+}
+
+.tm-footer { font-size: 0.95rem; }
+.tm-footer-title { font-size: 1.4rem; }
+
+/* Videos */
+#tm-video-container {
+    max-height: 400px;
+    overflow: hidden;
+    background-color: #333;
+    margin-bottom: 90px;
+    position: relative;
+}
+
+#tm-video {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#tm-video-control-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    color: #e1e1e1;
+}
+
+.tm-video-details {
+    height: 100%;
+    padding: 40px;
+}
+
+/* About */
+.tm-row-1640 { max-width: 1640px; }
+.tm-about-2-col { max-width: 716px; }
+.tm-about-3-col { max-width: 540px; }
+
+.tm-about-2-col,
+.tm-about-3-col {
+    margin-bottom: 50px;
+}
+
+.tm-about-icon-container {
+    width: 150px;
+    height: 150px;
+    border: 1px solid #009999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tm-about-img-text { max-width: 940px; }
+
+/* Contact */
+select.form-control { border-radius: 0; }
+select.form-control option { height: 30px; }
+
+select:not([multiple]) {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-position: right 15px center;
+    background-repeat: no-repeat;
+    background-image: url(../img/select-arrow.png);
+    padding: 14px 20px;
+    padding-right: 20px;
+    color: #666;
+}
+
+.mapouter{
+    position:relative;
+    height:480px;
+    width:100%;
+    max-width: 480px;
+}
+
+.gmap-canvas {
+    overflow:hidden;
+    background:none!important;
+    height:480px;
+    width:100%;
+}
+
+.tm-contact-form { max-width: 420px; }
+.tm-address-col { max-width: 520px; }
+.tm-contacts { padding-left: 0; }
+
+.tm-contacts li {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.tm-contacts li a i { width: 30px; }
+.tm-social { display: flex; }
+
+.tm-social li {
+    list-style: none;
+    margin-bottom: 20px;
+    margin-right: 15px;
+}
+
+.tm-social li a i {
+    width: 40px;
+    height: 40px;
+    color: #666666;
+    background-color: #EEEEEE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.tm-social li a:hover i {
+    color: #fff;
+    background-color: #009999;
+}
+
+.form-control,
+input:-internal-autofill-selected,
+select:not([multiple]) {
+    color: #009999 !important;
+}
+
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color:  #009999;
+    opacity: 1; /* Firefox */
+}
+
+@media (max-width: 991px) {
+    .navbar-collapse {
+        position: fixed;
+        top: 50px;
+        right: 0px;
+        background: white;
+        width: 150px;
+        padding: 15px;
+    }
+
+    .tm-container-content { max-width: 870px; }
+    .tm-contact-form, .tm-address-col, .mapouter { max-width: 100%; }
+    .tm-people-row { max-width: 900px; }
+}
+
+@media (max-width: 767px) {
+    .tm-paging-col { flex-direction: column; }
+    .tm-paging { flex-wrap: wrap; }
+    .tm-about-img-text { max-width: 640px; }
+    .tm-about-2-col, .tm-about-3-col { margin-bottom: 50px; }
+}
+
+@media (max-width: 575px) {
+    .tm-container-content { max-width: 420px; }
+
+    .tm-search-form {
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .tm-search-input {
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .tm-people-row { max-width: 420px; }
+}
+
+@media (max-width: 400px) {
+    .tm-btn-big { padding: 12px 50px 14px; }
+}
+
+@media (max-width: 334px) {
+    .tm-social-links {
+        flex-wrap: wrap;
+        justify-content: start !important;
+    }
+
+    .tm-social-links li { margin-right: 3px; }
+}
+
+:root {
+  --kawasaki-green: #00B140;
+  --kawasaki-green-dark: #009637;
+  --dark-bg: #111111;
+  --muted: #ccc;
+}
+
+/* Override warna utama */
+.tm-text-primary, .tm-text-primary a {
+  color: var(--kawasaki-green) !important;
+}
+
+.navbar, .tm-footer {
+  background-color: var(--dark-bg) !important;
+}
+
+.btn-primary, .tm-btn-prev, .tm-btn-next, .tm-search-btn {
+  background-color: var(--kawasaki-green) !important;
+  border-color: var(--kawasaki-green) !important;
+}
+
+.btn-primary:hover, .tm-search-btn:hover {
+  background-color: var(--kawasaki-green-dark) !important;
+}
+
+/* tweak untuk kontras kartu */
+.tm-gallery .tm-video-item figcaption h2 {
+  color: #fff !important;
+}
+.tm-text-gray { color: var(--muted) !important; }
+
+/* ====== FIX TRANSPARANSI GAMBAR UNTUK WEB KATALOG ====== */
+
+/* Hilangkan background gelap di area figure */
+figure.effect-ming {
+  background: transparent !important;
+}
+
+/* Pastikan gambar tidak redup dan transparansi asli tetap terlihat */
+figure.effect-ming img {
+  opacity: 1 !important;
+  background-color: transparent !important;
+  transition: opacity 0.35s ease;
+}
+
+/* Nonaktifkan overlay hitam saat hover */
+figure.effect-ming::before,
+figure.effect-ming::after {
+  background-color: transparent !important;
+  opacity: 0 !important;
+}
+
+/* Saat hover, gambar hanya sedikit meredup */
+figure.effect-ming:hover figcaption {
+  background-color: transparent !important;
+}
+
+figure.effect-ming:hover img {
+  opacity: 0.85 !important;
+}
+
+/* Pastikan elemen figure lain juga transparan */
+.tm-video-item,
+.tm-video-item figure,
+.tm-gallery-item figure {
+  background-color: transparent !important;
+}
+
+/* Pastikan semua gambar di galeri transparan */
+.tm-gallery img {
+  background-color: transparent !important;
+  border-radius: 8px;
+}
+
+/* Jika background halaman terlalu gelap, bisa ubah di sini */
+body {
+  background-color: #f5f5f5 !important; /* Ganti sesuai selera: abu muda, hitam, atau hijau tua */
+}
+
+/* Tambahan: hilangkan efek hitam halus di shadow/overlay */
+figure.effect-ming figcaption::before {
+  background-color: transparent !important;
+  opacity: 0 !important;
+}
+
+/* ====== STYLE UNTUK KETERANGAN PART ====== */
+.tm-part-info {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 10px 5px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.tm-part-info:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tm-part-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 5px;
+}
+
+.tm-part-desc {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.tm-part-price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #27ae60; /* hijau khas Ninja 😎 */
+}
+
+/* =============================== */
+/* CUSTOM STYLE FOR KATALOG NINJA  */
+/* =============================== */
+
+.tm-part-item {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.tm-part-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.tm-part-img {
+  width: 100%;
+  height: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff; /* agar gambar transparan tampil putih */
+  border-bottom: 1px solid #eee;
+}
+
+.tm-part-img img {
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+  background: transparent;
+  transition: transform 0.3s ease;
+}
+
+.tm-part-item:hover img {
+  transform: scale(1.05);
+}
+
+.tm-part-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.tm-part-desc {
+  font-size: 0.9rem;
+  color: #666;
+  min-height: 48px;
+}
+
+.tm-part-price {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #42b549;
+}
+
+/* --- TOMBOL TOKOPEDIA --- */
+.btn-toko {
+  display: inline-block;
+  background-color: #42b549;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-toko:hover {
+  background-color: #368f3f;
+  text-decoration: none;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* --- PAGINATION --- */
+.pagination {
+  display: flex;
+  gap: 8px;
+}
+
+.pagination .page-link {
+  color: #000;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  padding: 6px 12px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.pagination .page-link:hover {
+  background-color: #42b549;
+  color: white;
+  border-color: #42b549;
+}
+
+.pagination .active .page-link {
+  background-color: #42b549;
+  border-color: #42b549;
+  color: #fff;
+}
+
+/* === HERO SECTION (KAWASAKI STYLE – FIXED PERFECT ALIGNMENT) === */
+.tm-hero {
+  position: relative;
+  width: 100%;
+  height: 52vh;
+  background-image: url("../img/kawasaki.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.tm-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.6));
+  z-index: 1;
+}
+
+/* === SEARCH FORM === */
+.tm-hero .tm-search-form {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  width: 80%;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tm-hero .tm-search-form:hover {
+  transform: translateX(-50%) translateY(-3px);
+  box-shadow: 0 6px 25px rgba(46, 204, 113, 0.4);
+}
+
+/* === SEARCH INPUT === */
+.tm-search-input {
+  flex: 1;
+  border: none;
+  padding: 14px 20px;
+  font-size: 1.05rem;
+  border-radius: 50px 0 0 50px;
+  outline: none;
+  height: 48px; /* tinggi disamakan */
+  background-color: transparent;
+  color: #333;
+}
+
+/* === SEARCH BUTTON (KAWASAKI STYLE) === */
+.tm-search-btn {
+  border: none;
+  background-color: #2ecc71;
+  color: white;
+  padding: 0 24px; /* seimbang secara vertikal */
+  font-size: 1.2rem;
+  height: 48px; /* tinggi sama dengan input */
+  border-radius: 0 50px 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.tm-search-btn:hover {
+  background-color: #27ae60;
+  transform: scale(1.05);
+}
+
+.tm-search-btn i {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+/* === HIJAUKAN TEKS "CARI PRODUK..." DI INPUT SEARCH === */
+.tm-search-input::placeholder {
+  color: #2ecc71; /* Hijau Kawasaki */
+  font-weight: 500;
+  opacity: 1; /* pastikan warnanya terlihat jelas */
+}
+
+/* Jika ingin efek berubah warna saat fokus */
+.tm-search-input:focus::placeholder {
+  color: #27ae60; /* Hijau lebih gelap saat aktif */
+  transition: color 0.3s ease;
+}
+
+
+/* === NAVBAR KAWASAKI STYLE === */
+.navbar {
+  background-color: #2ecc71; /* Hijau Kawasaki utama */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 12px 30px;
+}
+
+.navbar-brand {
+  color: white !important;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.navbar-brand i {
+  margin-right: 8px;
+  color: white;
+}
+
+/* Warna link navbar */
+.navbar-nav .nav-link {
+  color: white !important;
+  font-weight: 500;
+  margin: 0 10px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efek hover */
+.navbar-nav .nav-link:hover {
+  color: #1b5e20 !important; /* Hijau gelap */
+  transform: translateY(-2px);
+}
+
+/* Warna item aktif */
+.navbar-nav .nav-link.active {
+  color: #145a32 !important; /* Sedikit lebih gelap untuk aktif */
+  font-weight: 600;
+}
+
+/* Tombol toggle (hamburger) untuk mobile */
+.navbar-toggler {
+  border: none;
+  color: white;
+  font-size: 1.4rem;
+  background: transparent;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* === NAVBAR ACTIVE & HOVER LINE STYLE (KAWASAKI STYLE) === */
+.navbar-nav .nav-link {
+  position: relative;
+  color: white !important;
+  font-weight: 500;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+/* Garis bawah animasi */
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -5px; /* jarak garis dari teks */
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color: #2ecc71; /* hijau kawasaki */
+  transition: width 0.3s ease;
+  border-radius: 3px;
+}
+
+/* Saat hover */
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+  background-color: #2ecc71; /* hijau terang */
+}
+
+/* Saat aktif */
+.navbar-nav .nav-link.active::after {
+  width: 100%;
+  background-color: #145a32; /* hijau gelap saat aktif */
+}
+
+/* Warna teks aktif */
+.navbar-nav .nav-link.active {
+  color: #145a32 !important;
+  font-weight: 600;
+}
